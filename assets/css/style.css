@@ -13,6 +13,8 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
+/* color */
+
 :root{
   --primary: #B5A1E5; 
 --on-primary: #100E17; 
@@ -39,10 +41,11 @@
 --black-alpha-10: hsla(0, 0%, 0%, 0.1);
 
 /**
-gardient colors
+gradients colors
 **/
 --gradient-1: linear-gradient(180deg, hsla(270, 5%, 7%, 0) 0%, hsla(270, 5%, 7%, 0.8) 65%, hsl(270, 5%, 7%) 100%);
 --gradient-2: linear-gradient(180deg, hsla(260, 5%, 12%, 0) 0%, hsla(260, 5%, 12%, 0.8) 65%, hsl(260, 5%, 12%) 100%);
+/* TYPOGRAPHY */
 /**
 font family
 **/
@@ -64,11 +67,12 @@ font size
 font weigth
 **/
 --weight-regular: 400;
---weight-semiBold: 600
+--weight-semiBold: 600;
 
 /**
 box shadow
 **/
+
 --shadow-1: 0px 1px 3px hsla(0, 0%, 0%, 0.5);
 --shadow-2: 0px 3px 6px hsla(0, 0%, 0%, 0.4);
 
@@ -87,11 +91,6 @@ transition
 
 
 }
-
-
-
-
-
 
 
 /*-----------------------------------*\
@@ -138,7 +137,7 @@ sub{vertical-align: baseline;}
 
 sup{vertical-align: top;}
 
-sub,sup{font-size: 0.75;}
+sub,sup{font-size: 0.75em;}
 
 html{
   font-family: var(--ff-nunito-sans);
@@ -198,7 +197,7 @@ body{
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing:antialiased;
   height: 1em;
-  height: 1em;
+  width: 1em;
   overflow: hidden;
 }
 
@@ -207,6 +206,48 @@ body{
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+.container{
+  max-width: 1600px;
+  width: 100;
+  margin-inline: auto;
+  padding: 16px;
+}
+
+.icon-btn{
+  background-color: var(--white-alpha-8);
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+}
+
+.has-state{position: relative;}
+
+.has-state:hover{box-shadow: var(--shadow-1);}
+
+.has-state:is(focus, :focus-visible){box-shadow: none;}
+
+.has-state::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  clip-path: circle(100% at 50% 50%);
+  transition: var(--transition-short);
+}
+
+.has-state:hover::before{ background-color: var(--white-alpha-4);}
+
+.has-state:is(:focus,:focus-visible)::before{
+  background-color: var(--white-alpha-8);
+  animation: ripple 250ms ease forwards;
+}
+
+@keyframes ripple{
+  0% {clip-path: circle(0% at 50 50);}
+  100% {clip-path: circle(100% at 50% 50%);}
+}
 
 
 

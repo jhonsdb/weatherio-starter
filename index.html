@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,53 +18,54 @@
         -google font link
     -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;
+    600&display=swap" rel="stylesheet">
 
-<!-- 
+    <!-- 
     -custom css link
 -->
-<link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
-<!--  
+    <!--  
     custom js link
 -->
 
-<script src="./assets/js/app.js" type="module"></script>
-<script src="./assets/js/route.js" type="module"></script>
+    <script src="./assets/js/app.js" type="module"></script>
+    <script src="./assets/js/route.js" type="module"></script>
 
 </head>
+
 <body>
-    
-    <!-- 
-        Header
-    -->
 
-    <header class="header">
-        <div class="container">
+<!-- 
+   Header
+-->
 
-            <a href="#" class="logo">
-                <img src="./assets/images/logo.png" width="364" height="58" 
-                alt="logo">
-            </a>
+<header class="header">
+    <div class="container">
 
-            <div class="search-viwe" data-search-view>
+        <a href="#" class="logo">
+            <img src="./assets/images/logo.png" width="364" height="58"
+             alt="logo">
+        </a>
 
-                <div class="seach-wrapper">
-                    <input type="search" name="search"  placeholder="Search city..."
-                    autocomplete="off" class="search-field" data-search-field>
+        <div class="search-view" data-search-view>
 
-                    <span class="m-icon">search</span>
-                    <button class="icon-btn leading-icon has-state" arial-label="close search"
-                data-search-toggler>
-                <span class="m-icon">arrow_back</span>
+            <div class="seach-wrapper">
+                <input type="search" name="search" placeholder="Search city..."
+                 autocomplete="off" class="search-field" data-search-field>
+
+                <span class="m-icon">search</span>
+
+                <button class="icon-btn leading-icon has-state" arial-label="close
+                search" data-search-toggler>
+                    <span class="m-icon">arrow_back</span>
                 </button>
-                </div>
+            </div>
 
-
-                <div class="searhc-result" data-search-result>
-
-                    <ul class="view-list" data-search-result>
+                <div class="search-result" data-search-result>
+                    <ul class="view-list" data-search-list>
 
                         <li class="view-item">
                             <span class="m-icon">location_on</span>
@@ -71,32 +73,38 @@
                             <div>
                                 <p class="item-title">London</p>
 
-                                <p class="label-2 item-subtitle"></p>
+                                <p class="label-2 item-subtitle">State of london, GB</p>
                             </div>
 
                             <a href="#" class="item-link has-state" data-search-toggler></a>
-                            
+
                         </li>
                     </ul>
                 </div>
 
-                
-
-
-
-            </div>
-
-            <div class="header-action">
-
-                <button class="icon-btn has-state"></button>
-
-
-            </div>
-
-            
         </div>
+
+        <div class="header-actions">
+
+            <button class="icon-btn has-state" aria-label="open search" 
+            data-search-toggler>
+                <span class="m-icon">search</span>
+            </button>
+
+            <a href="#/current-location" class="btn-primary has-state" 
+            data-current-location-btn disabled>
+                <span class="m-icon">my_location</span>
+
+                <span class="span">Current Location</span>
+            </a>
+
+        </div>
+
+
+    </div>
     </header>
 
 
 </body>
+
 </html>
