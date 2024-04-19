@@ -402,7 +402,7 @@
                 - #HOURLY Y FORECAST
               -->
 
-            <div class="section hourly-forecast" aria-label="houry forecast"
+            <section class="section hourly-forecast" aria-label="houry forecast"
             data-hourly-forecast>
             
               <h2 class="title-2">Today at</h2>
@@ -601,9 +601,9 @@
                 </ul>
               </div>
 
-            </div>
-        </div>
+            </section>
 
+            
 
 
         <!-- 
@@ -617,15 +617,38 @@
 
             <p class="body-3">
                 Powered Byk <a href="https://openweathermap.org/api" title="Free 
-                OpenWeather Api" target="_blank"></a>
+                OpenWeather Api" target="_blank" 
+                rel="noopener">
+                <img src="./assets/images/openweather.png" width="150" 
+                height="30" loading="lazy" alt="OpenWeather">
+                </a>
             </p>
          </footer>
+        </div>
+
+        <div class="loading" data-loading></div>
+
 
     </article>
 </main>
 
 
 
+<!-- 
+    -404 SECTION
+ -->
+
+ <section class="error-content" data-error-contetn>
+
+    <h2 class="heading">404</h2>
+
+    <p class="body-1">Page not found!</p>
+
+    <a href="#" class="btn-primary">
+        <span class="span">Go Home</span>
+    </a>
+
+ </section>
 
 </body>
 
